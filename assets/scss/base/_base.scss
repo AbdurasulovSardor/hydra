@@ -15,6 +15,7 @@ body {
   background: var(--first-color);
   color: var(--text-color);
   transition: 0.5s;
+  overflow-x: hidden;
 }
 
 h1,

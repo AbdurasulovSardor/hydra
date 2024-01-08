@@ -6,3 +6,22 @@ hamburgerBtn.addEventListener("click", () => {
   headerNav.classList.toggle("activeList")
   navButtons.classList.toggle("activeButtons")
 })
+
+///////////////////////////////////////////////
+
+let homeList = document.querySelector(".home__list")
+let firstItem = document.querySelectorAll(".home__item")[0]
+let arrowBtn = document.querySelectorAll(".home__arrow")
+let scrollWidth = homeList.scrollWidth - homeList.clientWidth
+const showHideBtn = () => {
+  arrowBtn[0].style.display = homeList.scrollLeft == 0 ? "none" : "block"
+  arrowBtn[1].style.display = homeList.scrollLeft == scrollWidth ? "none" : "block"
+}
+showHideBtn()
+arrowBtn.forEach(button => {
+  button.addEventListener("click", () => {
+    let firstItemWidth = firstItem.clientWidth;
+    homeList.scrollLeft += button.id == "left" ? -firstItemWidth : firstItemWidth
+    setTimeout(() => showHideBtn(), 60)
+  })
+});
