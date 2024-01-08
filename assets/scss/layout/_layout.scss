@@ -13,3 +13,13 @@
   padding: 0 20px;
   margin: 0 auto;
 }
+
+.button-small {
+  display: inline-block;
+  color: var(--first-color);
+  font-size: var(--button-font-size);
+  font-weight: 700;
+  padding: 17px 38px;
+  background: var(--first-color-light);
+  border-radius: 40px;
+}
