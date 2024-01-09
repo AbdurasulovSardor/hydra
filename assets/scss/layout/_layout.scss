@@ -7,6 +7,19 @@
     line-height: 1;
     margin-bottom: 10px;
   }
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: var(--h2-font-size);
+    font-weight: 100;
+    white-space: nowrap;
+
+    img {
+      display: block;
+      margin-left: 30px;
+    }
+  }
 }
 
 .container {

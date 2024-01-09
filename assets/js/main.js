@@ -25,3 +25,17 @@ arrowBtn.forEach(button => {
     setTimeout(() => showHideBtn(), 60)
   })
 });
+
+///////////////////////////////////////////////////
+
+let buildList = document.querySelector(".build__list")
+let buildItem = document.querySelectorAll(".build__item")[0]
+let buildBtn = document.querySelectorAll(".build__card-button")
+let buildScrollWidth = buildList.scrollWidth - buildList.clientWidth
+
+buildBtn.forEach(button => {
+  button.addEventListener("click", () => {
+    let firstBuildItem = buildItem.clientWidth
+    buildList.scrollLeft += button.id == "build-left" ? -firstBuildItem : firstBuildItem
+  })
+})

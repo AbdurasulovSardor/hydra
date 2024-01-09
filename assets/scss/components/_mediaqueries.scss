@@ -46,6 +46,31 @@
   .introduction__about-data .introduction__subtitle {
     display: none;
   }
+  .section__subtitle {
+    display: block;
+    align-items: center;
+
+    img {
+      display: none;
+    }
+  }
+  .build {
+    &__head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__description {
+      display: none;
+    }
+    &__list {
+      padding-top: 0;
+    }
+    &__card-button {
+      display: block;
+    }
+  }
 }
 @media screen and (max-width: 1000px) {
   .nav {
@@ -158,6 +183,9 @@
     }
   }
   .section__title {
+    font-size: 26px;
+  }
+  .section__subtitle {
     font-size: 26px;
   }
 }
