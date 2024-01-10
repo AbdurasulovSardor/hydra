@@ -1,0 +1,48 @@
+.technologies {
+  &__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(".././images/vr.png");
+    background-repeat: no-repeat;
+    border-radius: 110px;
+    scroll-behavior: smooth;
+  }
+  &__description {
+    display: none;
+    margin-top: 30px;
+    width: 60%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__toggle {
+    position: absolute;
+    bottom: -8%;
+    transform: rotate(270deg);
+    border: none;
+    outline: none;
+    background: var(--first-color-light);
+    padding: 3px 3px 0 3px;
+    border-radius: 50%;
+  }
+  &__sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.showTech {
+  display: block;
+}
+.showTech ~ .technologies__toggle {
+  transform: rotate(90deg);
+  bottom: -5%;
+}
